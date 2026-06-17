@@ -1,0 +1,278 @@
+/* =========================
+   PORTFOLIO
+========================= */
+#portfolio {
+  scroll-margin-top: 90px;
+}
+.portfolio {
+  padding: 20px 8%;
+   background: #fcf9fe;
+  overflow-x: hidden;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.portfolio-header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.portfolio-header span {
+  color: #8b5cf6;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.portfolio-header h2 {
+  margin-top: 12px;
+  font-size: 3.2rem;
+  color: #0f172a;
+}
+
+.portfolio-header p {
+  max-width: 700px;
+  margin: 20px auto 0;
+  color: #64748b;
+  line-height: 1.8;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(350px, 1fr)
+  );
+  gap: 35px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.project-card {
+  position: relative;
+  background: white;
+  border-radius: 24px;
+  overflow: hidden;
+
+  box-shadow:
+    0 10px 30px rgba(15, 23, 42, 0.08);
+
+  transition: all 0.35s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+
+  box-shadow:
+    0 20px 45px rgba(139, 92, 246, 0.15);
+}
+
+/* =========================
+   PROJECT NUMBER
+========================= */
+
+.project-number {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+
+  background: rgba(255,255,255,.95);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 700;
+  color: #8b5cf6;
+
+  z-index: 10;
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.project-image {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+
+  transition: transform .4s ease;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.05);
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.project-content {
+  padding: 28px;
+}
+
+.project-content h3 {
+  color: #0f172a;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+/* =========================
+   TECH STACK
+========================= */
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.tech-stack span {
+  padding: 8px 14px;
+
+  background: #2e0198;
+  color: #ffffff;
+
+  border-radius: 10px;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.project-content p {
+  color: #000000;
+  line-height: 1.8;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.project-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.project-buttons a {
+  text-decoration: none;
+
+  padding: 12px 22px;
+
+  border-radius: 5px;
+
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+}
+
+.project-buttons a:first-child {
+  border: 2px solid #2e0198;
+  color: #5d4a8a;
+}
+
+.project-buttons a:last-child {
+  border: 2px solid #2e0198;
+  color: #5d4a8a;
+}
+
+.project-buttons a:hover {
+  transform: translateY(-3px);
+  background: #2e0198;
+  color: white;
+
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+  .portfolio {
+    padding: 100px 6%;
+  }
+
+  .portfolio-header h2 {
+    font-size: 2.8rem;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .portfolio {
+    padding: 10px 30px;
+   
+  }
+
+  .portfolio-header {
+    margin-bottom: 50px;
+  }
+
+  .portfolio-header h2 {
+    font-size: 2.2rem;
+  }
+
+  .portfolio-header p {
+    font-size: 0.95rem;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-content {
+    padding: 22px;
+  }
+
+  .project-image {
+    height: 220px;
+  }
+
+  .project-buttons {
+    flex-direction: column;
+  }
+
+  .project-buttons a {
+    text-align: center;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+  .portfolio-header h2 {
+    font-size: 1.9rem;
+  }
+
+  .project-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .project-image {
+    height: 190px;
+  }
+}

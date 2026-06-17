@@ -1,0 +1,133 @@
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+  background: #020617;
+  color: white;
+  padding: 70px 8% 30px;
+}
+
+/* =========================
+   TOP
+========================= */
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+
+  padding-bottom: 35px;
+
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-left {
+  max-width: 500px;
+}
+
+.footer-left h2 {
+  color: #d9c8ff;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.footer-left p {
+  color: #94a3b8;
+  line-height: 1.8;
+}
+
+/* =========================
+   SOCIAL ICONS
+========================= */
+
+.footer-right {
+  display: flex;
+  gap: 18px;
+}
+
+.footer-right a {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 20%;
+
+  background: rgba(255,255,255,.05);
+
+  color: white;
+
+  font-size: 1.3rem;
+
+  transition: all .3s ease;
+}
+
+.footer-right a:hover {
+  background: #9772ed;
+  transform: translateY(-5px);
+}
+
+/* =========================
+   BOTTOM
+========================= */
+
+.footer-bottom {
+  text-align: center;
+  color: #94a3b8;
+  margin-top: 25px;
+  font-size: 0.95rem;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 768px) {
+
+  .footer {
+    padding: 60px 20px 25px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-left h2 {
+    font-size: 1.8rem;
+  }
+
+  .footer-right {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+  .footer-left h2 {
+    font-size: 1.6rem;
+  }
+
+  .footer-left p {
+    font-size: 0.95rem;
+  }
+
+  .footer-right a {
+    width: 45px;
+    height: 45px;
+    font-size: 1.1rem;
+  }
+
+  .footer-bottom {
+    font-size: 0.85rem;
+  }
+}

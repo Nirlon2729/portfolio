@@ -1,0 +1,455 @@
+/* =========================
+   CONTACT SECTION
+========================= */
+/* ==========================
+   TOAST NOTIFICATION
+========================== */
+.toast {
+  position: fixed;
+
+  top: 15px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  z-index: 99999;
+
+  background: white;
+  color: #16a34a;
+
+  border: 2px solid #000;
+
+  padding: 16px 28px;
+
+  border-radius: 14px;
+
+  font-weight: 600;
+
+  animation:
+    toastShow 0.5s ease forwards,
+    toastHide 0.5s ease 4.5s forwards;
+}
+.toast-success {
+  background: #ffffff;
+  color: #16a34a;
+
+  border: 2px solid #000;
+
+  box-shadow: none;
+}
+.toast-error {
+  background: #ffffff;
+  color: #dc2626;
+
+  border: 2px solid #000;
+
+  box-shadow: none;
+}
+@keyframes toastShow {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+@keyframes toastHide {
+  from {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-100%);
+  }
+}
+#contact {
+  scroll-margin-top: 80px;
+}
+.contact {
+  padding: 40px 8%;
+  background: #4a2762;
+  color: #fff;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.contact-header span {
+  color: #8b5cf6;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.contact-header h2 {
+  font-size: 3rem;
+  margin: 15px 0;
+}
+
+.contact-header p {
+  max-width: 650px;
+  margin: auto;
+  color: #cbd5e1;
+  line-height: 1.8;
+}
+
+/* =========================
+   LAYOUT
+========================= */
+
+.contact-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.contact-info,
+.contact form {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255,255,255,0.1);
+
+  border-radius: 24px;
+  padding: 35px;
+}
+
+/* =========================
+   LEFT SIDE
+========================= */
+
+.contact-info h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  color: #d6dbe5;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.info-item {
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  color: #e5e7eb;
+}
+
+/* =========================
+   CONTACT BUTTONS
+========================= */
+
+.contact-links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.contact-icon {
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  border-radius: 12px;
+
+  text-decoration: none;
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+.contact-icon svg {
+  font-size: 22px;
+}
+
+.email-btn {
+  background: #ea4335;
+  color: white;
+}
+
+.email-btn:hover {
+  transform: translateY(-3px);
+}
+
+.whatsapp-btn {
+  background: #25d366;
+  color: white;
+}
+
+.whatsapp-btn:hover {
+  transform: translateY(-3px);
+}
+
+/* =========================
+   FORM
+========================= */
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+
+  padding: 16px;
+
+  border-radius: 12px;
+
+  border: 1px solid rgba(255,255,255,0.15);
+
+  background: rgba(255,255,255,0.08);
+
+  color: white;
+  font-size: 16px;
+
+  transition: 0.3s ease;
+}
+
+.contact input::placeholder,
+.contact textarea::placeholder {
+  color: #94a3b8;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  outline: none;
+  border-color: #8b5cf6;
+  box-shadow: 0 0 15px rgba(139,92,246,.25);
+}
+
+.contact textarea {
+  min-height: 190px;
+  resize: vertical;
+}
+/* Loading Button */
+.loading-btn {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+.contact button:disabled {
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Spinner */
+.spinner {
+  width: 18px;
+  height: 18px;
+
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top: 2px solid #fff;
+
+  border-radius: 50%;
+
+  display: inline-block;
+  margin-right: 10px;
+
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Success & Error Messages */
+.status-message {
+  margin-top: 12px;
+  text-align: center;
+  font-weight: 600;
+  animation: fadeIn 0.3s ease;
+}
+
+.success {
+  color: white;
+  
+}
+
+.error {
+  color: #f87171;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.contact button {
+  border: none;
+
+  padding: 16px;
+
+  border-radius: 12px;
+
+  background: linear-gradient(
+    135deg,
+    #8b5cf6,
+    #6366f1
+  );
+
+  color: white;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.contact button:hover {
+  transform: translateY(-3px);
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+
+  .contact {
+    padding: 80px 6%;
+  }
+
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-header h2 {
+    font-size: 2.5rem;
+  }
+}
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .contact {
+    padding: 40px 20px;
+  }
+
+  .contact-header h2 {
+    font-size: 2rem;
+  }
+
+  /* Smaller Contact Boxes */
+  .contact-info,
+  .contact form {
+    padding: 18px;
+    border-radius: 16px;
+  }
+
+  .contact-info h3 {
+    font-size: 1.5rem;
+  }
+
+  .contact-info p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .info-item {
+    padding: 14px 0;
+    font-size: 14px;
+  }
+
+  .contact-links {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .contact-icon {
+    width: 100%;
+    height: 52px;
+    font-size: 14px;
+  }
+
+  .contact input,
+  .contact textarea {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .contact textarea {
+    min-height: 140px;
+  }
+
+  .contact button {
+    padding: 14px;
+    font-size: 15px;
+  }
+
+  /* Toast Notification */
+  .toast {
+    top: 10px;
+
+    width: 85%;
+    max-width: 320px;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    padding: 12px 16px;
+
+    font-size: 13px;
+    text-align: center;
+
+    border-radius: 12px;
+  }
+}
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+  .contact-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .contact-info h3 {
+    font-size: 1.5rem;
+  }
+
+  .contact-info,
+  .contact form {
+    padding: 20px;
+    border-radius: 18px;
+  }
+}

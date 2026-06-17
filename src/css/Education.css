@@ -1,0 +1,337 @@
+
+/* ==========================
+   EDUCATION SECTION
+========================== */
+
+#education {
+  scroll-margin-top: 90px;
+}
+
+.education {
+  position: relative;
+  padding: 30px 8%;
+  overflow: hidden;
+ background: #fcf9fe;
+  
+}
+
+/* ==========================
+   BACKGROUND SHAPES
+========================== */
+
+.bg-shape {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  z-index: 0;
+}
+
+
+/* ==========================
+   HEADER
+========================== */
+
+.edu-header {
+  position: relative;
+  z-index: 2;
+
+  text-align: center;
+
+  max-width: 850px;
+
+  margin: auto auto 70px;
+}
+
+.section-tag {
+  
+  color: #4507d4;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+
+.edu-header h2 {
+  margin-top: 20px;
+
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+
+  line-height: 1.1;
+
+  font-weight: 800;
+
+  color: #111827;
+}
+
+.edu-header p {
+  margin-top: 25px;
+
+  color: #64748b;
+
+  font-size: 1.05rem;
+
+  line-height: 1.8;
+}
+
+/* ==========================
+   STATS
+========================== */
+
+.edu-stats {
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+  gap: 25px;
+
+  margin-bottom: 70px;
+}
+
+.stat-card {
+  padding: 35px;
+
+  border-radius: 28px;
+
+  background:
+    rgba(255,255,255,.7);
+
+  backdrop-filter: blur(15px);
+
+  border:
+    1px solid rgba(63, 51, 51, 0.5);
+
+  text-align: center;
+
+  transition: .35s;
+}
+
+.stat-card:hover {
+  transform:
+    translateY(-10px);
+}
+
+.stat-card h3 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+   border: 1px black solid;
+}
+
+.stat-card span {
+  color: #64748b;
+}
+
+/* ==========================
+   EDUCATION GRID
+========================== */
+
+.education-grid {
+  position: relative;
+  z-index: 2;
+
+  max-width: 900px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 20px;
+}
+
+/* ==========================
+   CARD
+========================== */
+
+.edu-card {
+  position: relative;
+  overflow: hidden;
+
+  padding: 25px;
+
+  border-radius: 20px;
+
+ 
+
+  border: 1px solid #d2d3d5;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+
+  transition: all 0.3s ease;
+}
+
+.edu-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(69, 7, 212, 0.12);
+}
+
+.edu-card h3 {
+  margin-top: 1px;
+  font-size: 1.25rem;
+  
+}
+
+.edu-card h4 {
+  margin-top: 8px;
+  font-size: 0.95rem;
+}
+
+.edu-card p {
+  margin-top: 12px;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.year-watermark {
+  font-size: 4rem;
+ 
+  right: 15px;
+}
+
+.year-watermark {
+  position: absolute;
+
+  bottom: 0px;
+  right: 20px;
+
+  font-size: 6rem;
+
+  font-weight: 900;
+
+  color:
+    rgba(4, 5, 42, 0.06);
+
+  pointer-events: none;
+}
+
+/* ==========================
+   CONTENT
+========================== */
+
+.card-content {
+  position: relative;
+  z-index: 2;
+}
+
+.status {
+  display: inline-block;
+
+  padding: 8px 16px;
+
+  border-radius: 999px;
+
+  font-size: .85rem;
+
+  font-weight: 600;
+}
+
+.completed {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.pursuing {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.edu-card h3 {
+  margin-top: 22px;
+
+  font-size: 1.6rem;
+
+  color: #111827;
+
+  line-height: 1.4;
+}
+
+.edu-card h4 {
+  margin-top: 12px;
+
+  color: #475569;
+
+  font-weight: 500;
+}
+
+.edu-card p {
+  margin-top: 18px;
+
+  color: #64748b;
+
+  line-height: 1.8;
+}
+
+/* ==========================
+   BUTTON
+========================== */
+
+.document-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 25px;
+
+  padding: 14px 24px;
+
+  border-radius: 14px;
+
+  text-decoration: none;
+
+  font-weight: 600;
+
+  color: white;
+
+  background-color: #26017d;
+
+  transition: .3s;
+}
+
+.document-btn:hover {
+  transform:
+    translateY(-3px);
+
+  box-shadow:
+    0 15px 30px
+    rgba(99,102,241,.3);
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width:768px) {
+
+#education {
+  scroll-margin-top: 30px;
+}
+
+  .education {
+    padding: 90px 6%;
+  }
+
+  .education-grid {
+    grid-template-columns: 1fr;
+  }
+
+ .year-watermark {
+    font-size: 4rem;
+    bottom: 15px;
+
+  } 
+
+  .edu-card {
+    padding: 28px;
+  }
+
+  .edu-header h2 {
+    font-size: 2.4rem;
+  }
+}

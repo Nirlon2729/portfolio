@@ -37,7 +37,7 @@ function Navbar() {
         data-aos="fade-right"
         data-aos-delay="100"
       >
-        <span>{"<Nirlon />"}</span>
+        <span>Nirlon</span>
 
       </div>
 

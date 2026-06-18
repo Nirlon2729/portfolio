@@ -60,7 +60,7 @@ function Hero() {
           </a>
 
           <a
-            href="/src/assets/resume.pdf"
+            href="../assets/resume.pdf"
             target="_blank"
             rel="noreferrer"
           >
